@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+</head>
+<body>
+  <!-- Rating state start -->
+  <main class="container">
+
+    <section id="one">
+        <div class="icon">
+          <img src="./images/icon-star.svg" alt="star">
+        </div>
+
+        <div class="text">
+          <div>
+            <h1>How did we do?</h1>
+            <p>Please let us know how we did with your support request. All feedback is appreciated 
+            to help us improve our offering!</p>
+            <div class="rating">
+              <button>1</button>
+              <button>2</button>
+              <button>3</button>
+              <button>4</button>
+              <button>5</button>
+            </div>
+          </div>
+            <button class="btn" id="submit">SUBMIT</button>
+        </div> 
+
+    </section>
+    
+    <section id="two">
+
+      <div class="icon-two">
+        <img src="./images/illustration-thank-you.svg" alt="ty">
+      </div>
+
+      <div class="data">
+        <h4>You selected <span id="number"></span> out of 5</h4>
+        <h1>Thank you!</h1>
+        <p>We appreciate you taking the time to give a rating. If you ever need more support, 
+          don’t hesitate to get in touch!</p>
+      </div>
+
+    </section>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+  </main>
+  <footer>
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/SandyAstorga" target="_blank">Sandy Astorga ✨✨</a>.
+  </footer>
+  <script src="./main.js"></script>
+</body>
+</html>
