@@ -132,7 +132,7 @@ body{
 }
 .avatar, p, span{
     font-size: .88rem;
-    padding-right: 1.2rem;
+    padding-right: .89rem;
 }
 .avatar p{
     color: var(--softblue);
