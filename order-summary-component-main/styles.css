@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root{
+    /* Primary */
+    --paleblue: hsl(225, 100%, 94%);
+    --brightblue: hsl(245, 75%, 52%);
+
+    /* Neutral */
+    --verypaleblue: hsl(225, 100%, 98%);
+    --desaturatedblue: hsl(224, 23%, 55%);
+    --darkblue: hsl(223, 47%, 23%);
+
+    --paragraph: 16px;
+}
+
+/* General */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+html{
+    background-color: var(--paleblue);
+}
+body{
+    min-height: 100vh;
+    background: url(./images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container */
+.container{
+    width: 338px;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0px 5px 5px 0px hsl(223, 47%, 23%, 30%);
+} 
+
+/* Section Image */
+.image-container img{
+    width: 100%;
+    display: flex;
+    border-radius: 15px 15px 0px 0px;
+}
+
+/* Section Info */
+.info-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem;
+}
+.info-container h1{
+    font-weight: 900;
+    color: var(--darkblue);
+    padding-top: .6rem;
+    padding-bottom: .9rem;
+}
+.info-container p{
+    padding: 0rem .5rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    text-align: center;
+    font-size: .8rem;
+    color: var(--desaturatedblue);
+}
+.order{
+    padding: 1.8rem 0rem 0rem 0rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.order img{
+    width: 16%;
+}
+.plan .annual{
+    font-size: .7rem;
+    font-weight: 900;
+    color: var(--darkblue);
+}
+.plan p{
+    font-size: .7rem;
+    padding-left: .3rem;
+}
+.change{
+    text-align: left;
+    padding-left: 3.8rem
+}
+.change p{
+    font-size: .7rem;
+    color: var(--brightblue);
+    font-weight: 700;
+    text-decoration:underline;
+}
+.change p:hover{
+    color: var(--desaturatedblue);
+    text-decoration:none;
+    cursor: pointer;
+}
+
+/* Section Buttons */
+.btns{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 2rem;
+    margin-bottom: .4rem;
+}
+.btns .proceed{
+    color: white;
+    font-size: .8rem;
+    font-weight: 700;
+    border-radius: .5rem;
+    background-color: var(--brightblue);
+    border-style: none;
+    padding: .7rem;
+    box-shadow: 0px 3px 5px 0px hsl(223, 47%, 23%, 60%);
+    margin-bottom: 1rem;
+}
+.btns .proceed:hover{
+    cursor: pointer;
+    background-color: var(--desaturatedblue);
+}
+.btns .cancel{
+    border-style: none;
+    background-color: white;
+    color: var(--desaturatedblue);
+    font-weight: 700;
+    font-size: .8rem;
+    border-radius: .5rem;
+    padding: .6rem;
+}
+.btns .cancel:hover{
+    color: var(--darkblue);
+    cursor: pointer;
+}
+
+/* Footer */
+footer{
+    margin-top: 20px;
+    color: var(--darkblue);
+}
+footer a{
+    text-decoration: none;
+    color: var(--desaturatedblue);
+    font-weight: 900;
+}
+
+/* Responsive */
+@media screen and (max-width:650px) {
+    body{
+        align-items: center;
+        background-image: url(./images/pattern-background-mobile.svg);
+    }
+    .container{
+        width: 300px;
+    }
+    .info-container h1{
+        font-size: 1.3rem;
+    }
+    .info-container p{
+        padding: 0rem 1.5rem;
+    }
+    .order{
+        padding-left: .7rem;
+    }
+    .change{
+        padding-left: .5rem
+    }
+    .plan p{
+        padding-left: .2rem;
+    }
+    .btns{
+        margin-bottom: 0rem;
+    }
+    footer{
+        font-size: .75rem;
+    }
+}
