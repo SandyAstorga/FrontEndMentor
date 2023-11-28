@@ -1,0 +1,152 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+
+    /* Primary */
+    --brightorange: hsl(31, 77%, 52%);
+    --darkcyan: hsl(184, 100%, 22%);
+    --verydarkcyan: hsl(179, 100%, 13%);
+    
+    /* Neutral */
+    --transparentwhiteparagraphs: hsla(0, 0%, 100%, 0.75);
+    --verylightgrayBGHB: hsl(0, 0%, 95%);
+
+    /* FontFamily */
+    --shoulders: 'Big Shoulders Display', sans-serif;
+    --deca: 'Lexend Deca', sans-serif;
+    
+    /* FontSize */
+    --size: 15px
+
+}
+
+/* General */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background-color: var(--verylightgrayBGHB);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container Principal */
+.container{
+    width: 730px;
+    display: flex;
+}
+
+/* Sections */
+.sections{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+}
+
+/* Sections Elements */
+.sections img{
+    width: 30%;
+}
+.sections h1{
+    font-family: var(--shoulders);
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--transparentwhiteparagraphs);
+    margin: 1.5rem 0rem 1.5rem 0rem;
+}
+.sections p{
+    font-family: var(--deca);
+    font-size: .8rem;
+    color: var(--transparentwhiteparagraphs);
+    line-height: 1.3rem;
+    margin: 1.5rem 0rem 4.5rem 0rem;
+}
+.sections button{
+    font-family: var(--deca);
+    padding: .68rem;
+    border-radius: 1.5rem;
+    width: 7.5rem;
+}
+.sections button:hover{
+    cursor: pointer;
+    border: .12rem solid var(--transparentwhiteparagraphs);
+    color: var(--transparentwhiteparagraphs);
+    background: none;
+}
+
+/* Background sections y buttons*/
+.one{
+    background-color: var(--brightorange);
+    padding: 2rem;
+    border-radius: .5rem 0rem 0rem .5rem;
+}
+.one .btn1{
+    color: var(--brightorange);
+    border: .12rem solid var(--transparentwhiteparagraphs);
+}
+
+.two{
+    background-color: var(--darkcyan);
+    padding: 2rem;
+}
+.two .btn2{
+    color: var(--darkcyan);
+    border: .12rem solid var(--transparentwhiteparagraphs);
+}
+
+.three{
+    background-color: var(--verydarkcyan);
+    padding: 2rem;
+    border-radius: 0rem .5rem .5rem 0rem;
+}
+.three .btn3{
+    color: var(--verydarkcyan);
+    border: .12rem solid var(--transparentwhiteparagraphs);
+}
+
+/* Footer */
+footer{
+    margin-top: 2rem;
+    font-family: var(--deca);
+}
+footer a{
+    text-decoration: none;
+    color: var(--darkcyan);
+}
+
+
+/* Responsive */
+@media screen and (max-width:650px){
+    .container{
+        width: 287px;
+        padding: .9rem;
+    }
+    .sections{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .sections p{
+        margin: 1.5rem 0rem 1rem 0rem;
+    }
+
+    .one{
+        border-radius: .5rem .5rem 0rem 0rem;
+    }
+    .three{
+        border-radius: 0rem 0rem .5rem .5rem;
+    }
+
+    footer{
+        margin-top: .1rem;
+        margin-bottom: .7rem;
+        font-size: .65rem;
+    }
+}
