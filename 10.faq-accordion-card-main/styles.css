@@ -1,0 +1,236 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root{
+
+    /* Text */
+    --verydarkdesaturatedblue: hsl(238, 29%, 16%);
+    --softred: hsl(14, 88%, 65%);
+    --verydarkgrayishblue: hsl(237, 12%, 33%);
+    --darkgrayishblue: hsl(240, 6%, 50%);
+
+    /* Background */
+    --softviolet: hsl(273, 75%, 66%);
+    --softblue: hsl(240, 73%, 65%);
+
+    /* Dividers */
+    --lightgrayishblue: hsl(240, 5%, 91%);
+
+    /* FontSize */
+    --size: 12px;
+
+    /* FontFamily */
+    --font: 'Kumbh Sans', sans-serif;
+}
+
+/* General */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, var(--softviolet), var(--softblue));
+    background-size: cover;
+    font-family: var(--font);
+    color: var(--verydarkdesaturatedblue);
+    font-size: var(--size);
+}
+
+/* ContainerPrincipal */
+.container{
+    width: 300px;
+    background-color: white;
+    border-radius: 1.3rem;
+    box-shadow: 0px 4px 8px 0px var(--verydarkdesaturatedblue);
+}
+
+/* Sections */
+.sections{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* SectionImage */
+.image{
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image img{
+    position: absolute;
+    top: -6.25rem;
+    width: 150%;
+    z-index: 2;
+}
+.back{
+    z-index: 1;
+    position: absolute;
+    background-image: url(./images/bg-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: .2rem;
+    width: 220px;
+    height: 100px;
+}
+
+
+/* SectionQuestions */
+.questions{
+    width: 100%;
+    padding: 6rem 1.5rem 2rem 1.5rem;
+}
+.questions h1{
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 700;
+    padding: 1.5rem 0rem 1rem 0rem;
+}
+.group{
+    padding: .5rem 0rem;
+}
+.question{
+    list-style: none;
+    cursor: pointer;
+    font-size: .73rem;
+}
+.line{
+    margin-top: .3rem;
+    width: 15.5rem;
+    border: .01rem solid var(--lightgrayishblue);
+    margin-bottom: .2rem;
+}
+.answer{
+    padding: .6rem .7rem 0rem 0rem;
+    font-size: .65rem;
+    line-height: 1rem;
+    font-weight: 400;
+}
+.group{
+    position: relative;
+}
+.arrow {
+    position: absolute;
+    top: .8rem;
+    right: .3rem;
+    transition: 300ms;
+}
+
+
+/* Hovers */
+.question:hover{
+    color: var(--softred);
+}
+.group[open]{
+    font-weight: 700;
+    color: var(--verydarkdesaturatedblue);
+}
+.group[open] .arrow{
+    transform: rotate(180deg);
+    transition: 300ms;
+}
+.group[open] .cube{
+    transform: translateX(-76px);
+}
+
+
+/* Footer */
+footer{
+    margin-top: 2rem;
+    font-size: .7rem;
+    font-weight: 700;
+}
+footer a{
+    text-decoration: none;
+    color: cyan ;
+}
+
+
+
+/* Responsive */
+@media screen and (min-width: 1024px) {
+    .container{
+        width: 700px;
+    }
+    .sections{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .image{
+        width: 50%;
+    }
+    .image img, .back{
+        display: none;
+    }
+
+    .bg{
+        position: relative;
+        background-image: url(./images/bg-pattern-desktop.svg);
+        background-size: 200%;
+        background-repeat: no-repeat;
+        background-position: -400px -210px; 
+        width: 100%;
+        height: 390px;
+    }
+    .woman{
+        position: absolute;
+        background-image: url(./images/illustration-woman-online-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: -50px 52px; 
+        width: 100%;
+        height: 390px;
+    }
+    .cube{
+        position: absolute;
+        background-image: url(./images/illustration-box-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: 50%;
+        height: 80px;
+        width: 280px;
+        transform: translateX(-103px);
+        margin-top: 10px;
+    }
+
+
+    .questions{
+        width: 50%;
+        padding: 0rem 3rem 1rem 1rem;
+    }
+    .questions h1{
+        text-align: left;
+        font-size: 1.7rem;
+        font-weight: 700;
+        padding: .8rem 0rem 1.5rem 0rem;
+    }
+    .line{
+        margin-top: .5rem;
+        width: 16.7rem;
+        margin-bottom: .3rem;
+    }
+    .arrow {
+        top: .7rem;
+        right: 1.9rem;
+    }
+    .answer {
+        padding-right: 2rem;
+        font-size: .63rem;
+        line-height: 1rem;
+    }
+
+    footer{
+        font-size: 1rem;
+    }
+}
+
