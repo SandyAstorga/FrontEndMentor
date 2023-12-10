@@ -1,0 +1,311 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+:root{
+    /* Primary */
+    --verydarkmagenta: hsl(300, 43%, 22%);
+    --softpink: hsl(333, 80%, 67%);
+
+    /* Neutral */
+    --darkgrayishmagenta: hsl(303, 10%, 53%);
+    --lightgrayishmagenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Size */
+    --size: 15px;
+
+    /* Font */
+    --spartan: 'League Spartan', sans-serif;
+}
+
+/* General */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    background-image: url(./images/bg-pattern-top-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+body{
+    background-image: url(./images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--spartan);
+}
+
+/* container */
+.container{
+    display: flex;
+    width: 900px;
+}
+
+/* Sections */
+.sections .text-rate{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: .7rem;
+}
+.text{
+    width: 50%;
+}
+.rate{
+    width: 50%;
+}
+.text h1{
+    color: var(--verydarkmagenta);
+    font-weight: 700;
+    font-size: 2.5rem;
+    padding: 1.5rem 10rem 1.3rem 0rem;
+}
+.text p{
+    color: var(--darkgrayishmagenta);
+    font-weight: 500;
+    font-size: .9rem;
+    line-height: 1rem;
+    padding: 0rem 6rem .7rem 0rem;
+}
+.rate div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--lightgrayishmagenta);
+    border-radius: .3rem;
+    width: 19rem;
+    height: 2.5rem;
+    margin: 1rem;
+}
+.rate .stars{
+    background-image: url(./images/icon-star.svg);
+    background-repeat: space;
+    background-size: .9rem;
+    height: 1.2rem;
+    width: 5rem;
+    padding-right: 1rem;
+}
+.rate span{
+    font-size: .8rem;
+    font-weight: 700;
+    color: var(--verydarkmagenta);
+}
+.rate .one{
+    margin-left: 2rem;
+    padding-right: 1rem;
+}
+.rate .two{
+    margin-left: 4rem;
+    padding-right: 1rem;
+}
+.rate .three{
+    margin-left: 6rem;
+    padding-right: 1rem;
+}
+
+/* Cards */
+.cards{
+    padding: 1.2rem .7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+.card{
+    background-color: var(--verydarkmagenta);
+    border-radius: .4rem;
+    padding: 1.7rem 1.75rem;
+}
+.card p{
+    font-size: .8rem;
+    color: var(--white);
+    padding-top: 1rem;
+    line-height: 1rem;
+}
+.name{
+    color: var(--white);
+    padding-bottom: .3rem;
+}
+.vb{
+    color: var(--softpink);
+}
+.i{
+    margin-top: 1.5rem;
+}
+.a{
+    margin-top: 3rem;
+}
+.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: .8rem;
+}
+.title img{
+    width: 13%;
+    border-radius: 100%;
+}
+.title div{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+}
+
+
+/* Footer */
+footer{
+    margin-top: 1rem;
+    font-weight: 700;
+}
+footer a{
+    text-decoration: none;
+}
+
+/* Responsive */
+@media screen and (max-width:770px) {
+    body{
+        align-items: flex-start;
+    }
+    .container{
+        width: 750px;
+    }
+
+    .sections .text-rate{
+        flex-direction: column;
+        padding: .7rem;
+    }
+    .text{
+        width: 80%;
+    }
+    .rate{
+        width: 80%;
+    }
+    .text h1{
+        text-align: center;
+        padding: 1.5rem 1.3em 1.3rem 1.3rem;
+    }
+    .text p{
+        text-align: center;
+        padding: 0rem 1rem .7rem 1rem;
+    }
+    .cards{
+        padding: 1rem 7rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .i, .a{
+        margin-top: .5rem;
+    }
+}
+
+@media screen and (max-width:450px) {
+    body{
+        align-items: center;
+    }
+    .container{
+        width: 550px;
+    }
+    .sections .text-rate{
+        flex-direction: column;
+        padding: .5rem;
+    }
+    .text h1{
+        text-align: center;
+        padding: 1.5rem;
+    }
+    .text p{
+        text-align: center;
+        padding: 0rem 1rem .7rem 1rem;
+    }
+    .cards{
+        gap: 1rem;
+    }
+    .rate div{
+        flex-direction: column;
+        width: 20rem;
+        height: 3.5rem;
+        margin: .7rem;
+    }
+    .rate span{
+        padding-bottom: .5rem;
+    }
+    .rate .one{
+        margin-left: 3rem;
+    }
+    .rate .two{
+        margin-left: 3rem;
+    }
+    .rate .three{
+        margin-left: 3rem;
+    }
+    .cards{
+        padding: 1.2rem 5rem;
+        flex-direction: column;
+        gap: .3rem;
+    }
+    .i, .a{
+        margin-top: 1rem;
+    }
+    footer{
+        margin-top: .5rem;
+    }
+}
+
+@media screen and (max-width:380px) {
+    body{
+        align-items: center;
+    }
+    .container{
+        width: 450px;
+    }
+    .sections .text-rate{
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+    .text h1{
+        text-align: center;
+        padding: 1rem;
+        line-height: 2rem;
+    }
+    .text p{
+        text-align: center;
+        font-size: 1rem;
+    }
+    .rate div{
+        flex-direction: column;
+        width: 17rem;
+        height: 3.5rem;
+        margin: .7rem;
+    }
+    .rate span{
+        padding-bottom: .7rem;
+    }
+    .rate .one{
+        margin-left: 1.5rem;
+    }
+    .rate .two{
+        margin-left: 1.5rem;
+    }
+    .rate .three{
+        margin-left: 1.5rem;
+    }
+    .cards{
+        padding: 1rem 5.4rem;
+        flex-direction: column;
+    }
+    .i, .a{
+        margin-top: .5rem;
+    }
+    footer{
+        margin-top: .3rem;
+        font-size: .6rem;
+    }
+}
