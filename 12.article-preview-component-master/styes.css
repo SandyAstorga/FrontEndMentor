@@ -79,7 +79,7 @@ body{
 .name{
     margin-left: 1rem;
 }
-.name h3{
+.name h2{
     color: var(--veryDarkGrayishBlue);
     font-weight: 700;
     font-size: .9rem;
@@ -186,7 +186,7 @@ footer a{
     .text .second{
         font-size: .9rem;
     }
-    .name h3{
+    .name h2{
         font-size: .8rem;
     }
     .name p{
@@ -257,7 +257,7 @@ footer a{
     .triangle{
         left: 93px;
     }
-    .name h3{
+    .name h2{
         font-size: 1rem;
     }
     .name p{
@@ -308,7 +308,7 @@ footer a{
         margin-left: 13.85rem;
         padding: .7em;
     }
-    .name h3{
+    .name h2{
         font-size: .85rem;
     }
     .name p{
