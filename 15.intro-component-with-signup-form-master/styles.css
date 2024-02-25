@@ -1,0 +1,249 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root { 
+    /* Colors */
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --darkblue: hsl(249, 10%, 26%);
+    --grayishblue: hsl(246, 25%, 77%);
+
+    --size: 16px;
+
+    --Poppins: "Poppins", sans-serif;
+}
+
+/* General */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--Poppins);
+    background-color: var(--red);
+    background-image: url('images/bg-intro-desktop.png');
+    color: white;
+}
+
+.sections {
+    width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.one {
+    width: 100%;
+}
+.one h1{
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+}
+.one p{
+    padding-top: 1rem;
+    font-size: .8rem;
+    line-height: 1.3rem;
+}
+
+.two {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+}
+.try {
+    background-color: var(--blue);
+    padding: 1rem;
+    color: var(--grayishblue);
+    border-radius: .5rem;
+    border: none;
+    width: 95%;
+    box-shadow: 1px 5px 3px 1px hsl(0, 100%, 70%);
+    cursor: pointer;
+    
+}
+.try span{
+    color: white;
+    font-weight: 600;
+    font-family: var(--Poppins);
+    
+}
+
+form {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 95%;
+    border-radius: .5rem;
+    padding: 1.8rem;
+    gap: 1rem;
+}
+form p {
+    text-align: center;
+    color: var(--grayishblue);
+    background-color: white;
+    font-size: .58rem;
+}
+form span {
+    color: var(--red);
+    font-weight: 700;
+}
+form input{
+    background-color: white;
+    padding: .8rem;
+    border-radius: .5rem;
+    border: solid .1rem var(--grayishblue);
+    width: 100%;
+}
+input::placeholder{
+    font-family: var(--Poppins);
+    font-size: .7rem;
+    font-weight: 600;
+    
+}
+input[type=text]{
+    font-family: var(--Poppins);
+    color: var(--darkblue);
+    font-weight: 600;
+}
+.input {
+    position: relative;
+}
+.input .error{
+    display: none;
+    width: 5%;
+    position: absolute;
+    left: 90%;
+    top: 30%;
+}
+.input .alert{
+    color: var(--red);
+    font-weight: 600;
+    display: none;
+    justify-content: flex-end;
+}
+.error-text::placeholder {
+    color: var(--red);
+}
+
+.claim {
+    background-color: var(--green);
+    border-radius: .3rem;
+    border: none;
+    padding: .8rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: var(--Poppins);
+    font-size: .8rem;
+    letter-spacing: .05rem;
+    box-shadow: inset 0 -4px 0  hsl(154, 59%, 45%);
+}
+
+footer {
+    margin-top: 1rem;
+    color: var(--darkblue);
+    font-size: .9rem;
+}
+footer a{
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Responsive */
+@media screen and (max-width:950px) {  
+    .sections {
+        width: 700px;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+    .one h1{
+        font-size: 2rem;
+        text-align: center;
+        padding-bottom: .5rem;
+    }
+    .one p{
+        text-align: center;
+
+    }
+}
+
+@media screen and (max-width:770px) {  
+    .sections {
+        width: 600px;
+    }
+    .one h1{
+        font-size: 2rem;
+        text-align: center;
+        padding-bottom: .5rem;
+    }
+    .one p{
+        text-align: center;
+
+    }
+}
+
+@media screen and (max-width:550px) {
+    body {
+        align-items: center;
+    }
+    .sections {
+        width: 440px;
+    }
+    .one h1{
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+    .one p{
+        text-align: center;
+        font-size: 1.1rem;
+        padding: 0 2.5rem;
+        line-height: 1.5rem;
+    }
+    .try {
+        padding: 1.7rem;
+        font-size: 1rem;
+    }
+    footer{
+        font-size: .78rem;
+    }
+}
+
+@media screen and (max-width:390px) {
+    body {
+        align-items: center;
+    }
+    .sections {
+        width: 350px;
+    }
+    .one h1{
+        font-size: 1.7rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+    .one p{
+        text-align: center;
+        font-size: .95rem;
+        padding: 0 2.5rem;
+        line-height: 1.5rem;
+    }
+    .try {
+        padding: 1.7rem 2rem;
+    }
+    footer{
+        font-size: .7rem;
+    }
+}
