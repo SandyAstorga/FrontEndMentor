@@ -34,7 +34,7 @@ body {
 }
 
 .sections {
-    width: 900px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,12 +45,13 @@ body {
 }
 .one h1{
     font-size: 2.5rem;
-    line-height: 2.5rem;
+    line-height: 2.7rem;
+    margin: 0 7.5rem;
 }
 .one p{
-    padding-top: 1rem;
     font-size: .8rem;
     line-height: 1.3rem;
+    margin: 1.5rem 7.5rem;
 }
 
 .two {
@@ -124,8 +125,8 @@ input[type=text]{
     display: none;
     width: 5%;
     position: absolute;
-    left: 90%;
-    top: 30%;
+    left: 92%;
+    top: 18%;
 }
 .input .alert{
     color: var(--red);
@@ -163,87 +164,32 @@ footer a{
 }
 
 /* Responsive */
-@media screen and (max-width:950px) {  
+@media screen and (max-width: 550px) {
     .sections {
-        width: 700px;
         flex-direction: column;
-        gap: 2.5rem;
     }
-    .one h1{
+    .one h1 {
         font-size: 2rem;
-        text-align: center;
-        padding-bottom: .5rem;
     }
-    .one p{
-        text-align: center;
-
-    }
-}
-
-@media screen and (max-width:770px) {  
-    .sections {
-        width: 600px;
-    }
-    .one h1{
-        font-size: 2rem;
-        text-align: center;
-        padding-bottom: .5rem;
-    }
-    .one p{
-        text-align: center;
-
+    .one p {
+        font-size: .8rem;
+        padding: 0 2rem;
+        line-height: 1.3rem;
     }
 }
 
-@media screen and (max-width:550px) {
-    body {
-        align-items: center;
-    }
+@media screen and (max-width: 770px) {
     .sections {
-        width: 440px;
+        flex-direction: column;
     }
-    .one h1{
-        font-size: 2.5rem;
+    .one h1,
+    .one p {
         text-align: center;
-        margin-bottom: 1.5rem;
-    }
-    .one p{
-        text-align: center;
-        font-size: 1.1rem;
-        padding: 0 2.5rem;
-        line-height: 1.5rem;
-    }
-    .try {
-        padding: 1.7rem;
-        font-size: 1rem;
-    }
-    footer{
-        font-size: .78rem;
     }
 }
 
-@media screen and (max-width:390px) {
-    body {
-        align-items: center;
-    }
+@media screen and (min-width: 950px) {
     .sections {
-        width: 350px;
-    }
-    .one h1{
-        font-size: 1.7rem;
-        text-align: center;
-        margin-bottom: 1.5rem;
-    }
-    .one p{
-        text-align: center;
-        font-size: .95rem;
-        padding: 0 2.5rem;
-        line-height: 1.5rem;
-    }
-    .try {
-        padding: 1.7rem 2rem;
-    }
-    footer{
-        font-size: .7rem;
+        flex-direction: row;
     }
 }
