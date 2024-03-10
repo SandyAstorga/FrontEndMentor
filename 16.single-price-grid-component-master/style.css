@@ -37,14 +37,15 @@ main{
     background-color: white;
     padding: 1.5rem;
 }
-.one h2{
+.one h1{
     color: var(--cyan);
     font-weight: 700;
     margin-bottom: 1.5rem;
 }
-.one h4{
+.one h2{
     color: var(--brightYellow);
     margin-bottom: 1rem;
+    font-size: 1rem;
 }
 .one p {
     color: var(--grayishBlue);
@@ -57,7 +58,7 @@ main{
     color: white;
     padding: 1.5rem;
 }
-.sub-one h2{
+.sub-one h1{
     margin-bottom: 1rem;
 }
 .full{
@@ -91,7 +92,7 @@ main{
     padding: 1.5rem;
     color: white;
 }
-.sub-two h2{
+.sub-two h1{
     margin-bottom: 1rem;
     
 }
