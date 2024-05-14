@@ -56,18 +56,18 @@ body{
     padding: 1.3rem 1rem 1.3rem;
 }
 .image img{
-    width: 40%;
+    width: 30%;
     border-radius: 50%;
 }
 
 .titles h1{
-    font-size: 1.2rem;
+    font-size: .9rem;
     color: var(--white);
     font-weight: 500;
     padding-bottom: .5rem;
 }
 .titles .one{
-    font-size: .7rem;
+    font-size: .68rem;
     font-weight: 500;
     color: var(--green);
     padding-bottom: 1.5rem;
@@ -121,6 +121,16 @@ footer a{
     .container{
         width: 340px;
         padding-bottom: .8rem;
+    }
+
+    .titles h1{
+        font-size: 1.1rem;
+    }
+    .titles .one{
+        font-size: .78rem;
+    }
+    .titles .two{
+        font-size: .8rem;
     }
 
     footer{
