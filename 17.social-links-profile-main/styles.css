@@ -39,8 +39,8 @@ body{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    width: 260px;
-    margin-top: 1rem;
+    width: 350px;
+    /* margin-top: 1rem; */
     padding-bottom: .5rem;
 }
 
@@ -73,7 +73,7 @@ body{
     padding-bottom: 1.5rem;
 }
 .titles .two{
-    font-size: .68rem;
+    font-size: .69rem;
     font-weight: 400;
     color: var(--white);
     padding-bottom: 1rem;
@@ -82,15 +82,15 @@ body{
 .options{
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 85%;
     text-align: center;
     color: var(--white);
     font-size: .7rem;
     
 }
 .menu{
-    padding: .7rem;
-    margin-bottom: .7rem;
+    padding: .8rem;
+    margin-bottom: .8rem;
     background-color: var(--grey);
     border-radius: .5rem;
     font-weight: 500;
@@ -107,7 +107,7 @@ body{
 footer{
     text-align: center;
     margin-top: .7rem;
-    font-size: .5rem;
+    font-size: .7rem;
     color: var(--white);
 }
 footer a{
@@ -119,7 +119,7 @@ footer a{
 /* Responsive */
 @media screen and (min-width: 765px) {
     .container{
-        width: 340px;
+        width: 360px;
         padding-bottom: .8rem;
     }
 
