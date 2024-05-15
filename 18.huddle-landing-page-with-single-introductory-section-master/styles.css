@@ -1,0 +1,222 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+:root{
+    --violet: hsl(257, 40%, 49%);
+    --softMagenta: hsl(300, 69%, 71%);
+
+    --poppins:  "Poppins", sans-serif;
+    --openSans: "Open Sans", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background-color: var(--violet);
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./images/bg-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.container{
+    width: 100vw;
+    padding: 0 2rem;
+    margin-top: 1.5rem;
+}
+
+.images{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+.logo {
+    width: 30%;
+}
+.illustraction{
+    width: 100%;
+}
+
+.text{
+    text-align: center;
+    padding: 2rem 0;
+    color: white;
+}
+.text h1{
+    font-family: var(--poppins);
+    font-size: 1.7rem;
+    padding: 0 1.2rem;
+}
+.text p{
+    font-family: var(--openSans);
+    font-size: .8rem;
+    font-weight: 400;
+    padding: 1rem 2.2em;
+    line-height: 1.2rem;
+}
+.text button{
+    font-family: var(--poppins);
+    color: var(--violet);
+    width: 55%;
+    padding: .6rem;
+    border-radius: 1.5rem;
+    border: none;
+    font-size: .7rem;
+    box-shadow: 0rem 0.18rem 0.2rem 0rem rgb(57, 55, 57);
+}
+
+.text button:hover{
+    cursor: pointer;
+    color: white;
+    background-color: var(--softMagenta);
+}
+
+.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    margin-top: 1.5rem;
+}
+
+.circle{
+    cursor: pointer;
+    display: flex;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 10rem;
+    border: 1px solid white;
+    justify-content: center;
+    align-items: center;
+}
+.circle, .facebook{
+    padding: .5rem;
+    fill:white;
+}
+.circle, .twitter{
+    padding: .5rem;
+    fill:white;
+}
+.circle, .instagram{
+    padding: .5rem;
+    fill:white;
+}
+
+
+.circle:hover{
+    border: 1px solid var(--softMagenta);
+}
+.facebook:hover{
+    fill: var(--softMagenta);
+}
+.twitter:hover{
+    fill: var(--softMagenta);
+}
+.instagram:hover{
+    fill: var(--softMagenta);
+}
+
+
+footer{
+    text-align: center;
+    font-family: var(--poppins);
+    font-size: .73rem;
+    padding: 1.2rem 0;
+}
+footer a{
+    text-decoration: none;
+    color: var(--softMagenta);
+}
+
+/* Responsive */
+@media screen and (min-width: 768px){
+    body{
+        background-size: cover;
+    }
+    .container{
+        width: 100vw;
+        padding: 0 1rem;
+        display: flex;
+        position: relative;
+    }
+    
+    .one{
+        width: 100%;
+    }
+    .two{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        padding: 0 1rem;
+        position: relative;
+    }
+    
+    .text{
+        text-align: left;
+    }
+    .text h1{
+        padding: 0;
+    }
+    .text p{
+        font-size: .88rem;
+        padding: 1rem 0;
+        line-height: 1.2rem;
+    }
+    .text button{
+        width: 40%;
+        font-size: .7rem;
+    }
+
+    .social{
+        justify-content: end;
+        position: absolute;
+        top: 85%;
+        left: 70%;
+    }
+
+    footer{
+        padding: 1rem 0;
+    }
+}
+
+@media screen and (min-width: 950px){
+    .two{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        padding: 0 2rem;
+        position: relative;
+    }
+    .text{
+        text-align: left;
+    }
+    .text h1{
+        font-size: 2.5rem;
+    }
+    .text p{
+        font-size: .9rem;
+    }
+    .text button{
+        font-size: .8rem;
+    }
+
+    footer{
+        font-size: 1rem;
+    }
+}
