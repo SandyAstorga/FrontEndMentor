@@ -112,7 +112,7 @@ footer a{
 /* Responsive */
 @media screen  and (max-width: 400px){
     .container{
-        width: 320px;
+        width: 90%;
         padding: .6rem;
     }
     
