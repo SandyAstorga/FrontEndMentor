@@ -78,6 +78,14 @@ body {
     cursor: pointer;
     color: var(--yellow);
 }
+/* .container:hover{
+    box-shadow: 10px 10px 0px 0px var(--black);
+} */
+.container:has(.titles h1:hover) {
+    box-shadow: 10px 10px 0px 0px var(--black);
+}
+
+
 .description{
     font-size: .9rem;
     color: var(--grey);
