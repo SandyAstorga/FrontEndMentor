@@ -1,0 +1,137 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    /* Colors */
+
+    /* Primary */
+    --yellow: hsl(47, 88%, 63%);
+
+    /* Neutral */
+    --white: hsl(0, 0%, 100%);
+    --grey: hsl(0, 0%, 50%);
+    --black: hsl(0, 0%, 7%);
+
+    --size: 16px;
+    --figtree: "Figtree", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--figtree);
+    background-color: var(--yellow);
+}
+
+.container{
+    width: 350px;
+    padding: .8rem;
+    border-radius: 1rem;
+    border: 1px solid var(--black);
+    background-color: var(--white);
+    box-shadow: 8px 11px 0px 4px var(--black);
+}
+
+
+.image{
+    padding: .5rem;
+}
+.image img{
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.text{
+    padding: .5rem;
+}
+.tag{
+    background-color: var(--yellow);
+    font-weight: 800;
+    font-size: .82rem;
+    width: 25%;
+    text-align: center;
+    border-radius: .2rem;
+    padding: .4rem;
+    margin-bottom: .7rem;
+}
+
+.date{
+    font-size: .85rem;
+    margin-bottom: .7rem;
+    font-weight: 500;
+}
+.titles h1{
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: .9rem;
+}
+.titles h1:hover{
+    cursor: pointer;
+    color: var(--yellow);
+}
+.description{
+    font-size: .93rem;
+    color: var(--grey);
+    margin-bottom: 1rem;
+    line-height: 1.2rem;
+}
+
+
+.author{
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+.name{
+    font-size: .7rem;
+    font-weight: 800;
+}
+.author img{
+    width: 10%;
+}
+
+footer{
+    margin-top: 1.5rem;
+    font-size: .8rem;
+}
+footer a{
+    text-decoration: none;
+    color: purple;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media screen  and (max-width: 400px){
+    .container{
+        width: 320px;
+        padding: .6rem;
+    }
+    
+    .tag{
+        font-size: .7rem;
+        padding: .3rem;
+    }
+    .date{
+        font-size: .78rem;
+    }
+    .titles h1{
+        font-size: 1.2rem;
+    }
+
+    .description{
+        font-size: .9rem;
+    }
+
+    footer{
+        font-size: .72rem;
+    }
+}
