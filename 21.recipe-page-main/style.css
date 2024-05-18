@@ -1,0 +1,226 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+:root{
+    /* Colors */
+
+   /* Primary */
+    --Nutmeg: hsl(14, 45%, 36%);
+    --darkRaspberry: hsl(332, 51%, 32%);
+
+    /* Neutral */
+    --white: hsl(0, 0%, 100%);
+    --roseWhite: hsl(330, 100%, 98%);
+    --eggshell: hsl(30, 54%, 90%);
+    --lightGrey: hsl(30, 18%, 87%);
+    --wengeBrown: hsl(30, 10%, 34%);
+    --darkCharcoal: hsl(24, 5%, 18%);
+
+    --size: 16px;
+    --outfit: "Outfit", sans-serif;
+    --young: "Young Serif", serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    color: var(--Nutmeg);
+    font-family: var(--young);
+    font-weight: 200;
+}
+.container{
+    width: 370px;
+    background-color: var(--roseWhite);
+}
+.space{
+    padding: 1.5rem;
+}
+
+/* Section one */
+.image img{
+    width: 100%;
+}
+
+
+/* Section two */
+.first-text{
+    padding: 0 0 2rem 0;
+}
+.first-text h1{
+    font-size: 2rem;
+    font-family: var(--young);
+    color: var(--darkCharcoal);
+    margin-bottom: 1rem;
+    font-weight: 200;
+    line-height: 2rem;
+}
+.first-text p{
+    font-family: var(--outfit);
+    color: var(--wengeBrown);
+    line-height: 1.4rem;
+}
+
+
+/* Section three */
+.preparation{
+    font-family: var(--outfit);
+    padding-bottom: 2rem;
+}
+.p-container{
+    background-color: hsl(30, 54%, 95%);
+    padding: 1.2rem;
+    border-radius: .7rem;
+}
+.preparation h4{
+    color: var(--darkRaspberry);
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+}
+.preparation ul{
+    padding: 0 1.7rem;
+}
+.preparation ul li{
+    margin-bottom: .5rem;
+    color: var(--wengeBrown);
+}
+.preparation li::marker {
+    font-size: .6rem;
+    color: var(--darkRaspberry);
+}
+.preparation ul li div {
+    margin-left: 1rem
+}
+.preparation ul li span{
+    font-weight: 700;
+}
+
+
+/* Section four */
+.ingredients ul{
+    padding: 1.4rem;
+    color: var(--wengeBrown);
+    font-family: var(--outfit);
+    font-size: 1rem;
+}
+.ingredients li{
+    margin-bottom: .5rem;
+}
+.ingredients li::marker {
+    font-size: .6rem;
+    color: var(--Nutmeg);
+}
+.ingredients div{
+    margin-left: 1rem
+}
+
+
+/* Section five */
+.instructions{
+    margin-top: 1.5rem;
+}
+.instructions ol{
+    padding: 1.4rem;
+    color: var(--wengeBrown);
+    font-family: var(--outfit);
+    font-size: .98rem;
+    line-height: 1.4rem;
+}
+.instructions li{
+    margin-bottom: .5rem;
+}
+.instructions li::marker{
+    color: var(--Nutmeg);
+    font-weight: 600;
+}
+.instructions div{
+    margin-left: 1rem;
+}
+.instructions ol li span{
+    font-weight: 700;
+}
+
+
+/* Section six*/
+.nutrition{
+    margin-top: 1.5rem;
+}
+.subtitle{
+    margin: 1rem 0;
+    font-family: var(--outfit);
+    color: var(--wengeBrown);
+    padding-right: 1rem;
+}
+.table-container{
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--outfit);
+    color: var(--wengeBrown);
+    padding: .5rem 1.8rem;
+}
+.table-container span{
+    color: var(--Nutmeg);
+    font-weight: 600;
+}
+.info{
+    width: 47%;
+}
+
+
+/* Footer */
+footer{
+    margin: .5rem 0 1rem;
+    font-size: .8rem;
+    font-family: var(--outfit);
+    font-weight: 500;
+}
+footer a{
+    text-decoration: none;
+    color: var(--darkRaspberry);
+    font-weight: 600;
+}
+
+/* Responsive */
+@media screen and (min-width: 320px){
+    body{
+        background-color: hsl(30, 54%, 90%);
+    }
+    .container{
+        width: 100%;
+    }
+    footer{
+        font-size: .7rem;
+    }
+}
+
+@media screen and (min-width: 600px){
+    body{
+        background-color: hsl(30, 54%, 90%);
+    }
+    .container{
+        border-radius: 1rem;
+        width: 55%;
+    }
+    .image{
+        padding: 1rem;
+    }
+    .image img{
+        border-radius: 1rem;
+    }
+    footer{
+        font-size: 1rem;
+    }
+
+}
