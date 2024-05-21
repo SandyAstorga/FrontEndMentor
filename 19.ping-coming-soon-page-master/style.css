@@ -1,0 +1,212 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    /* Colors */
+   /* Primary */
+    --blue: hsl(223, 87%, 63%);
+
+    /* #Secondary */
+    --paleBlue: hsl(223, 100%, 88%);
+    --lightRed: hsl(354, 100%, 66%);
+
+    /* Neutral */
+    --gray: hsl(0, 0%, 59%);
+    --veryDarkBlue: hsl(209, 33%, 12%);
+    
+    --libreFranklin: "Libre Franklin", sans-serif;
+    -size: 20px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--libreFranklin);
+}
+
+.container{
+    width: 80%;
+    margin: 1.5rem 0;
+}
+
+/* Section one */
+.one{
+    text-align: center;
+}
+.one img{
+    margin-bottom: 2rem;
+    width: 20%;
+}
+.one h1{
+    font-weight: 300;
+    color: var(--gray);
+    font-size: clamp(1.3rem, 2.5vw, 2.2rem); 
+    margin-bottom: 1rem;
+}
+.one span{
+    font-weight: 700;
+    color: var(--veryDarkBlue)
+}
+.one p{
+    font-size: clamp(.9rem, 2.5vw, 1rem); 
+    color: var(--veryDarkBlue);
+    font-weight: 400;
+    margin-bottom: 1.7rem;
+}
+
+
+/* Section two */
+.two{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+.two form{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.two form input{
+    border-radius: 2rem;
+    padding: .6rem 1.7rem;
+    border: 1px solid var(--blue);
+}
+.two form input::placeholder{
+    color: var(--paleBlue);
+    font-size: .8rem;
+}
+.two form button{
+    color: var(--paleBlue);
+    background-color: var(--blue);
+    border-radius: 2rem;
+    padding: .6rem 1.7rem;
+    border: none;
+    font-weight: 700;
+    box-shadow: 1px 3px 5px 0px var(--paleBlue);
+    cursor: pointer;
+    font-size: clamp(.7rem, 2.5vw, .9rem); 
+}
+.image img{
+    width: 100%;
+    margin-bottom: 3rem;
+}
+#error{
+    display: none;
+    font-size: clamp(.55rem, 2.5vw, .7rem);
+    text-align: center;
+    color: var(--lightRed);
+    font-style: italic;
+}
+
+
+/* Section three */
+.three p{
+    text-align: center;
+    font-size: clamp(.65rem, 2.5vw, .8rem);
+    color: var(--gray);
+}
+.three div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+}
+.circle{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    height: 1.7rem;
+    width: 1.7rem;
+    border-radius: 10rem;
+    border: 1px solid var(--blue);
+}
+.circle, .facebook{
+    padding: .5rem;
+    fill: var(--blue);
+}
+.circle, .twitter{
+    padding: .5rem;
+    fill: var(--blue);
+}
+.circle, .instagram{
+    padding: .5rem;
+    fill: var(--blue);
+}
+
+/* Modal */
+.swal-title {
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+}
+.swal-text {
+    font-size: clamp(.8rem, 2.5vw, 1.3rem);
+}
+.swal-modal {
+    width: calc(70% - 2px);
+}
+
+
+footer{
+    margin: .2rem 0 1rem 0;
+    font-size: clamp(.6rem, 2.5vw, 1rem);
+}
+footer a{
+    text-decoration: none;
+    color: var(--lightRed);
+    font-weight: 700;
+}
+
+
+/* Responsive */
+@media (min-width: 500px){
+    .container{
+        width: 60%;
+    }
+}
+
+@media (min-width: 700px){
+    .container{
+        width: 90%;
+    }
+    .two form{
+        flex-direction: row;
+    }
+    .image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 75%;
+    }
+    .one img{
+        width: 7%;
+    }
+    .two form input {
+        padding: .6rem 10rem;
+        padding-left: 1.2rem;
+    }
+    .two form div{
+        display: flex;
+        flex-direction: column;
+        gap: .3rem;
+    }
+    #notice{
+        height: 2.2rem;
+    }
+    .two form input::placeholder{
+        margin-left: -2rem;
+    }
+    .swal-modal {
+        width: calc(40% - 2px);
+    }
+    
+}
