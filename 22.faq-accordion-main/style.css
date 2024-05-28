@@ -1,0 +1,155 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+
+    /* Colors */
+    --White: hsl(0, 0%, 100%);
+    --Lightpink: hsl(275, 100%, 97%);
+    --Grayishpurple: hsl(292, 16%, 49%);
+    --Darkpurple: hsl(292, 42%, 14%);
+
+    --size: 16px;
+    --work: "Work Sans", sans-serif;
+}
+
+/* General */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: var(--work);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Lightpink);
+}
+
+/* Container */
+.container{
+    /* margin: 5rem .5rem .5rem; */
+    padding: 1rem 1rem 1.5rem;
+    background: var(--White);
+    border-radius: .5rem;
+    box-shadow: 1px 1.5px 7px 1px black;
+    z-index: 2;
+}
+.container-questions-answers{
+    margin-bottom: -2rem;
+}
+
+
+/* Title */
+.container-title{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.container-title img{
+    width: 7%;
+}
+.title{
+    text-align: center;
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    color: var(--Darkpurple);
+}
+
+
+
+/* questions */
+.question{
+    color: var(--Darkpurple);
+    font-weight: 700;
+    font-size: clamp(.82rem, 2.5vw, .7rem);
+    margin: 0 3rem 0 0;
+}
+.question:hover{
+    color: var(--Grayishpurple);
+    cursor: pointer;
+}
+
+
+/* answer */
+.container-answer{
+    padding: 0 1.8rem 0 0;
+    margin-bottom: 2.2rem;
+    display: none;
+}
+.answer{
+    font-size: clamp(.75rem, 2.5vw, .76rem);
+    color: var(--Grayishpurple);
+    font-weight: 400;
+}
+
+/* icons */
+.container-questions{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+.plus{
+    position: absolute;
+    left: 88%;
+    cursor: pointer;
+}
+.minus{
+    display: none;
+    position: absolute;
+    left: 88%;
+    cursor: pointer;
+}
+
+
+
+/* Footer */
+footer{
+    text-align: center;
+    margin-top: 2rem;
+    font-size: clamp(.65rem, 2.5vw, 1rem);
+    font-weight: 500;
+}
+footer a{
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--Grayishpurple);
+}
+
+.test {
+    background-image: url(/assets/images/background-pattern-mobile.svg);
+    background-size: cover;
+    height: 50vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+/* Responsive */
+@media screen and (max-width: 767px){
+    .container{
+        width: 310px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .container{
+        width: 420px;
+        padding: 1.7rem 1.7rem 1.9rem;
+    }
+    .container-title img{
+        width: 5%;
+    }
+    .plus{
+        left: 92%;
+    }
+    .minus{
+        left: 92%;
+    }
+    .test {
+        background-image: url(/assets/images/background-pattern-desktop.svg);
+    }
+}
