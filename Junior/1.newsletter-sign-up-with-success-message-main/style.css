@@ -1,0 +1,152 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    /* Colors */
+    /* Primary */
+    --bs-tomato: hsl(4, 100%, 67%);
+
+    /* Neutral */
+    --bs-darkslategrey: hsl(234, 29%, 20%);
+    --bs-charcoalgrey: hsl(235, 18%, 26%);
+    --bs-grey: hsl(231, 7%, 60%);
+    --bs-white: hsl(0, 0%, 100%);
+    
+    /* Font */
+    --font-roboto: "Roboto", sans-serif;
+
+    /* Font size */
+    --base-font-size: 16px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+body{
+    min-height: 100vh;
+    font-family: var(--font-roboto) !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Bootstrap */
+.bg-tomato {
+    background-color: var(--bs-tomato) !important;
+}
+
+.text-tomato {
+    color: var(--bs-tomato) !important;
+}
+
+.bg-darkslategrey {
+    background-color: var(--bs-darkslategrey) !important;
+}
+
+.text-darkslategrey {
+    color: var(--bs-darkslategrey) !important;
+}
+
+.bg-charcoalgrey {
+    background-color: var(--bs-charcoalgrey) !important;
+}
+
+.text-charcoalgrey {
+    color: var(--bs-charcoalgrey) !important;
+}
+
+.bg-grey {
+    background-color: var(--bs-grey) !important;
+}
+
+.text-grey {
+    color: var(--bs-grey) !important;
+}
+
+.text-white {
+    color: var(--bs-white) !important;
+}
+
+/* Custom styles */
+.change-image{
+    content: url('/assets/images/illustration-sign-up-mobile.svg');
+    width: 100%;
+}
+.small-img {
+    width: 1.5rem; 
+    height: auto; 
+}
+.text-paragraph{
+    font-size: clamp(.85rem, 2.5vw, .8rem) !important;
+    font-weight: 500;
+}
+.title{
+    font-size: clamp(2.2rem, 2.5vw, 2.5rem) !important;
+    font-weight: 600;
+}
+.label-input{
+    font-size: clamp(.7rem, 2.5vw, .8rem) !important;
+    font-weight: 600;
+}
+.custom-button-effect{
+    cursor: pointer;
+}
+.custom-button-effect:hover{
+    background: linear-gradient(to right, #ff5773, #ff6645);
+    box-shadow: 1px 1px 18px 1px #ff5773;
+}
+.custom-border-input{
+    font-size: clamp(.8rem, 2.5vw, .95rem) !important;
+    outline: none;
+    border: 1px solid var(--bs-grey);
+    border-radius: .2rem;
+    padding: .7rem;
+    margin-bottom: .5rem;
+    cursor: pointer;
+}
+.custom-border-input::placeholder{
+    font-size: clamp(.8rem, 2.5vw, .95rem) !important;
+}
+.custom-border-input:hover{
+    border: 1px solid var(--bs-charcoalgrey);
+}
+
+#emailSuccess{
+    display: none;
+}
+#emailError{
+    display: none;
+}
+
+
+/* Responsive */
+@media screen and (min-width: 768px) {
+    body{
+        background: var(--bs-darkslategrey) !important;
+    }
+    .container {
+        background: var(--bs-white);
+        border-radius: 1rem;
+        max-width: 800px !important;
+    }
+    .change-image {
+        content: url('/assets/images/illustration-sign-up-desktop.svg');
+        width: 93%;
+    }
+    .one{
+        padding: 1.5rem;
+    }
+    #suscribeForm{
+        padding-left: 2rem;
+    }
+    #emailSuccess{
+        width: 400px;
+        background: var(--bs-white);
+        border-radius: 1rem;
+    }
+    footer{
+        color: var(--bs-grey) !important;
+    }
+}
