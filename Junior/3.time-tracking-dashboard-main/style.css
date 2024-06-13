@@ -1,0 +1,177 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root{
+    /* Colors */
+    /* Primary */
+    --Blue: hsl(246, 80%, 60%);
+
+    --Lightredwork: hsl(15, 100%, 70%);
+    --Softblueplay: hsl(195, 74%, 62%);
+    --Lightredstudy: hsl(348, 100%, 68%);
+    --Limegreenexercise: hsl(145, 58%, 55%);
+    --Violetsocial: hsl(264, 64%, 52%);
+    --Softorangeselfcare: hsl(43, 84%, 65%);
+
+    /* Neutral */
+    --Verydarkblue: hsl(226, 43%, 10%);
+    --Darkblue: hsl(235, 46%, 20%);
+    --Desaturatedblue: hsl(235, 45%, 61%);
+    --PaleBlue: hsl(236, 100%, 87%);
+
+    /* Font */
+    --rubik: "Rubik", sans-serif;
+    /* FontSize */
+    --size: 18px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--rubik) !important;
+    background-color: var(--Verydarkblue) !important;
+}
+h1{
+    font-weight: 200 !important;
+}
+
+/* Bootstrap */
+.bg-blue {
+    background: var(--Blue);
+}.bg-darkblue {
+    background: var(--Darkblue);
+}
+.bg-lightredwork{
+    background-color: var(--Lightredwork);
+}
+.bg-softblueplay{
+    background-color: var(--Softblueplay);
+}
+.bg-lightredstudy{
+    background-color: var(--Lightredstudy);
+}
+.bg-limegreenexercise{
+    background-color: var(--Limegreenexercise);
+}
+.bg-violetsocial{
+    background-color: var(--Violetsocial);
+}
+.bg-softorangeselfcare{
+    background-color: var(--Softorangeselfcare);
+}
+.text-paleblue{
+    color: var(--PaleBlue);
+}
+
+
+
+/* CSS */
+.profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.43rem;
+    border-radius: .7rem;
+}
+.image-profile{
+    border: 2px solid white;
+    border-radius: 10rem;
+    margin-bottom: 1.8rem;
+    width: 30% !important;
+}
+.name{
+    font-weight: 200;
+    padding-bottom: 3rem;
+    font-size: clamp(1.9rem, 2.5vw, .8rem) !important;
+}
+.selected{
+    display: flex;
+    flex-direction:column ;
+    padding: 2rem 2rem .5rem 2rem;
+    color: var(--Desaturatedblue);
+}
+.selected p{
+    cursor: pointer;
+    width: max-content;
+}
+.selected p:hover{
+    color: white;
+}
+.menu{
+    cursor: pointer;
+}
+.daily, .monthly {
+    display: none;
+}
+.card-text {
+    display: flex;
+    flex-direction: column;
+}
+.card-text p{
+    font-size: .85rem;
+}
+.container-cards{
+    border-radius: .7rem;
+    background-position: top right;
+    background-repeat: no-repeat;
+    padding: 2.5rem 0 0 0;
+}
+.cards{
+    border-radius: .6rem;
+}
+.cards:hover{
+    cursor: pointer;
+    filter: brightness(1.3)
+}
+footer{
+    color: var(--PaleBlue);
+    margin-top: 1rem
+}
+footer a{
+    text-decoration: none;
+    color: var(--Violetsocial);
+    font-weight: 500;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .profile{
+        flex-direction: row;
+        align-items: center;
+        gap: .5rem;
+        padding: 1.5rem  .7rem !important;
+    }
+    .selected{
+        flex-direction:row;
+        justify-content: space-around;
+        padding: .5rem 1rem;
+    }
+    .selected p{
+        margin-bottom: 0 !important;
+    }
+    .name{
+        padding-bottom: 0 !important;
+        font-size: 1.2rem !important;
+    }
+    .image-profile{
+        width: 15% !important;
+        margin-bottom: 0;
+    }
+    .card-text{
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+    .card-text h1 {
+        margin-bottom: 0;
+    }
+}
