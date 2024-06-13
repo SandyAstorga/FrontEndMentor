@@ -1,156 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <title>Frontend Mentor | Testimonials grid section</title>
-  </head>
+</head>
 
-  <body>
-    <main class="container d-lg-flex principal">
-      <section class="one">
-        <section class="text-white row gap-4 d-flex justify-content-center">
-          <div class="bg-moderateviolet cards col-sm-7 card-one-bg">
-            <div class="d-flex align-items-center mb-3 gap-2">
-              <div>
-                <img src="/images/image-daniel.jpg" alt="daniel" class="img-fluid img-border-one"/>
-              </div>
-              <div >
-                <p class="mb-0">Daniel Clifford</p>
-                <p class="text-lightgray mb-0">Verified Graduate</p>
-              </div>
-            </div>
-            <h1 class=" text-white">
-              I received a job offer mid-course, and the subjects I learned were
-              current, if not more so, in the company I joined. I honestly feel
-              I got every penny’s worth.
-            </h1>
-            <p class="text-lightgray">
-              “ I was an EMT for many years before I joined the bootcamp. I’ve
-              been looking to make a transition and have heard some people who
-              had an amazing experience here. I signed up for the free intro
-              course and found it incredibly fun! I enrolled shortly thereafter.
-              The next 12 weeks was the best - and most grueling - time of my
-              life. Since completing the course, I’ve successfully switched
-              careers, working as a Software Engineer at a VR startup. ”
-            </p>
-          </div>
-
-          <div class="bg-verydarkgrayishblue cards col-sm-4">
-            <div class="d-flex align-items-center mb-3 gap-2">
-              <div>
-                <img src="/images/image-jonathan.jpg" alt="jonathan" class="img-fluid"/>
-              </div>
-              <div>
-                <p class="mb-0">Jonathan Walters</p>
-                <p class="text-lightgray mb-0">Verified Graduate</p>
-              </div>
-            </div>
-            <h1 class=" text-white">The team was very supportive and kept me motivated</h1>
-            <p class="text-lightgray">
-              “ I started as a total newbie with virtually no coding skills. I
-              now work as a mobile engineer for a big company. This was one of
-              the best investments I’ve made in myself. ”
-            </p>
-          </div>
-        </section>
-        <br>
-        <section class="row gap-4 d-flex justify-content-center">
-          <div class="bg-white cards col-sm-4 mb-2" style="box-shadow: 15px 15px 10px hsl(0, 0%, 81%)">
-            <div class="d-flex align-items-center mb-3 gap-2">
-              <div>
-                <img src="/images/image-jeanette.jpg" alt="jeanette" class="img-fluid"/>
-              </div>
-              <div>
-                <p class="mb-0">Jeanette Harmon</p>
-                <p class="text-verydarkgrayishblue mb-0">Verified Graduate</p>
-              </div>
-            </div>
-            <h1 class="">An overall wonderful and rewarding experience</h1>
-            <p class="text-verydarkgrayishblue">
-              “ Thank you for the wonderful experience! I now have a job I
-              really enjoy, and make a good living while doing something I love.
-              ”
-            </p>
-          </div>
-
-          <div class="bg-verydarkblackishblue text-white cards col-sm-7 mb-2">
-            <div class="d-flex align-items-center mb-3 gap-2">
-              <div>
-                <img src="/images/image-patrick.jpg" alt="patrick" class="img-fluid img-border"/>
-              </div>
-              <div>
-                <p class="mb-0">Patrick Abrams</p>
-                <p class="text-lightgray mb-0">Verified Graduate</p>
-              </div>
-            </div>
-            <h1 class="">
-              Awesome teaching support from TAs who did the bootcamp themselves.
-              Getting guidance from them and learning from their experiences was
-              easy.
-            </h1>
-            <p>
-              “ The staff seem genuinely concerned about my progress which I
-              find really refreshing. The program gave me the confidence
-              necessary to be able to go out in the world and present myself as
-              a capable junior developer. The standard is above the rest. You
-              will get the personal attention you need from an incredible
-              community of smart and amazing people. ”
-            </p>
-          </div>
-        </section>
-      </section>
-
-      <section class="two">
-        <div class="bg-white cards h-100" style="box-shadow: 15px 15px 10px hsl(0, 0%, 81%)">
+<body>
+  <main class="container d-lg-flex principal">
+    <section class="one">
+      <section class="text-white row gap-4 d-flex justify-content-center">
+        <div class="bg-moderateviolet cards col-md-7 card-one-bg">
           <div class="d-flex align-items-center mb-3 gap-2">
+            <img src="/images/image-daniel.jpg" alt="daniel" class="img-fluid img-border-one" />
             <div>
-              <img src="/images/image-kira.jpg" alt="kira" class="img-fluid "/>
+              <p class="mb-0">Daniel Clifford</p>
+              <p class="text-lightgray mb-0">Verified Graduate</p>
             </div>
+          </div>
+          <h1 class=" text-white">I received a job offer mid-course, and the subjects I learned were current, if not more so, in the company I joined. I honestly feel I got every penny’s worth.</h1>
+          <p class="text-lightgray">“ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a transition and have heard some people who had an amazing experience here. I signed up for the free intro course and found it incredibly fun! I enrolled shortly thereafter. The next 12 weeks was the best - and most grueling - time of my life. Since completing the course, I’ve successfully switched careers, working as a Software Engineer at a VR startup. ”</p>
+        </div>
+
+        <div class="bg-verydarkgrayishblue cards col-md-4">
+          <div class="d-flex align-items-center mb-3 gap-2">
+            <img src="/images/image-jonathan.jpg" alt="jonathan" class="img-fluid" />
             <div>
-              <p class="mb-0">Kira Whittle</p>
+              <p class="mb-0">Jonathan Walters</p>
+              <p class="text-lightgray mb-0">Verified Graduate</p>
+            </div>
+          </div>
+          <h1 class=" text-white">The team was very supportive and kept me motivated</h1>
+          <p class="text-lightgray">“ I started as a total newbie with virtually no coding skills. I now work as a mobile engineer for a big company. This was one of the best investments I’ve made in myself. ”</p>
+        </div>
+      </section>
+      <br>
+      <section class="row gap-4 d-flex justify-content-center">
+        <div class="bg-white cards col-md-4 mb-2" style="box-shadow: 15px 15px 10px hsl(0, 0%, 81%)">
+          <div class="d-flex align-items-center mb-3 gap-2">
+            <img src="/images/image-jeanette.jpg" alt="jeanette" class="img-fluid" />
+            <div>
+              <p class="mb-0">Jeanette Harmon</p>
               <p class="text-verydarkgrayishblue mb-0">Verified Graduate</p>
             </div>
           </div>
-          <h1 class="">Such a life-changing experience. Highly recommended!</h1>
-          <p class="text-verydarkgrayishblue">
-            “ Before joining the bootcamp, I’ve never written a line of code. I
-            needed some structure from professionals who can help me learn
-            programming step by step. I was encouraged to enroll by a former
-            student of theirs who can only say wonderful things about the
-            program. The entire curriculum and staff did not disappoint. They
-            were very hands-on and I never had to wait long for assistance. The
-            agile team project, in particular, was outstanding. It took my
-            learning to the next level in a way that no tutorial could ever
-            have. In fact, I’ve often referred to it during interviews as an
-            example of my developent experience. It certainly helped me land a
-            job as a full-stack developer after receiving multiple offers. 100%
-            recommend! ”
-          </p>
+          <h1 class="">An overall wonderful and rewarding experience</h1>
+          <p class="text-verydarkgrayishblue">“ Thank you for the wonderful experience! I now have a job I really enjoy, and make a good living while doing something I love. ”</p>
+        </div>
+
+        <div class="bg-verydarkblackishblue text-white cards col-md-7 mb-2">
+          <div class="d-flex align-items-center mb-3 gap-2">
+            <img src="/images/image-patrick.jpg" alt="patrick" class="img-fluid img-border" />
+            <div>
+              <p class="mb-0">Patrick Abrams</p>
+              <p class="text-lightgray mb-0">Verified Graduate</p>
+            </div>
+          </div>
+          <h1 class="">Awesome teaching support from TAs who did the bootcamp themselves. Getting guidance from them and learning from their experiences was easy.</h1>
+          <p>“ The staff seem genuinely concerned about my progress which I find really refreshing. The program gave me the confidence necessary to be able to go out in the world and present myself as a capable junior developer. The standard is above the rest. You will get the personal attention you need from an incredible community of smart and amazing people. ”</p>
         </div>
       </section>
-    </main>
+    </section>
 
-    <footer>
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by
-      <a href="https://github.com/SandyAstorga" target="_blank"
-        >Sandy Astorga 💫</a
-      >.
-    </footer>
+    <section class="two">
+      <div class="bg-white cards h-100" style="box-shadow: 15px 15px 10px hsl(0, 0%, 81%)">
+        <div class="d-flex align-items-center mb-3 gap-2">
+          <img src="/images/image-kira.jpg" alt="kira" class="img-fluid" />
+          <div>
+            <p class="mb-0">Kira Whittle</p>
+            <p class="text-verydarkgrayishblue mb-0">Verified Graduate</p>
+          </div>
+        </div>
+        <h1 class="">Such a life-changing experience. Highly recommended!</h1>
+        <p class="text-verydarkgrayishblue">“ Before joining the bootcamp, I’ve never written a line of code. I needed some structure from professionals who can help me learn programming step by step. I was encouraged to enroll by a former student of theirs who can only say wonderful things about the program. The entire curriculum and staff did not disappoint. They were very hands-on and I never had to wait long for assistance. The agile team project, in particular, was outstanding. It took my learning to the next level in a way that no tutorial could ever have. In fact, I’ve often referred to it during interviews as an example of my developent experience. It certainly helped me land a job as a full-stack developer after receiving multiple offers. 100% recommend! ”</p>
+      </div>
+    </section>
+  </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-  </body>
+  <footer>
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by
+    <a href="https://github.com/SandyAstorga" target="_blank">Sandy Astorga 💫</a>.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
 </html>

@@ -126,3 +126,12 @@ footer a{
     width: 100%;
   }
 }
+
+@media screen and (max-width: 575px) {
+  .row {
+    margin: .1rem !important
+  }
+  .two div{
+    margin-top: 1.5rem !important;
+  }
+}
