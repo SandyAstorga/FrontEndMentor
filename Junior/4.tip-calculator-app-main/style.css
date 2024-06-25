@@ -1,0 +1,152 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+:root{
+    /* Colors */
+    /* Primary */
+    --Strongcyan: hsl(172, 67%, 45%);
+
+    /* Neutral */
+    --Verydarkcyan: hsl(183, 100%, 15%);
+    --Darkgrayishcyan: hsl(186, 14%, 43%);
+    --Grayishcyan: hsl(184, 14%, 56%);
+    --Lightgrayishcyan: hsl(185, 41%, 84%);
+    --Verylightgrayishcyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+
+    /* Font */
+    --space: "Space Mono", monospace;
+    --sizeforminputs: 24px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--Lightgrayishcyan);
+    font-family: var(--space) !important;
+}
+h1, p{
+    font-size: .9rem !important;
+    margin-bottom: 0;
+}
+span{
+    font-size: .7rem !important;
+}
+button{
+    width: 100%;
+    border: none;
+    padding: .7rem;
+    border-radius: .5rem;
+}
+
+/* Bootstrap */
+.bg-Verydarkcyan {
+    background-color: var(--Verydarkcyan);
+}
+.bg-white {
+    background-color: var(--White);
+}
+.bg-Strongcyan{
+    background-color: var(--Strongcyan);
+}
+.text-white {
+    color: white;
+}
+.text-Darkgrayishcyan{
+    color: var(--Darkgrayishcyan);
+}
+.text-Strongcyan{
+    color: var(--Strongcyan);
+}
+
+/* Custom Styles */
+#error{
+    font-size: .8rem !important;
+    color: rgb(185, 27, 27);
+    display: none;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    gap: 2rem;
+    margin: 1rem;
+}
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#amount, #total{
+    font-size: 2rem !important;
+    color: var(--Strongcyan);
+}
+#reset{
+    text-transform: uppercase;
+    background-color: var(--Strongcyan);
+    border: none;
+    color: var(--Verydarkcyan);
+    opacity: 0.3;
+}
+#reset:hover{
+    opacity: 1;
+}
+.custom{
+    position: absolute;
+    width: 92%;
+    top: 8%;
+    padding: .57rem;
+    border: solid .15rem var(--Strongcyan);
+    color: var(--Verydarkcyan) !important;
+    text-align: end;
+    display: none;
+}
+.percent{
+    color: var(--White);
+}
+.percent:hover{
+    background-color: var(--Strongcyan);
+    color: var(--Verydarkcyan);
+}
+.border {
+    border-radius: 1rem;
+}
+.sub-border {
+    border-radius: .6rem;
+}
+.input-bill, .input-person {
+    background: var(--Verylightgrayishcyan);
+    border: none;
+    color: var(--Verydarkcyan) !important;
+    text-align: end;
+    outline: none !important;
+}
+.input-bill::placeholder, .input-person::placeholder{
+    color: var(--Grayishcyan);
+}
+.dollar, .person {
+    position: absolute;
+    padding-left: .7rem;
+    top: 25%;
+}
+
+
+footer {
+    color: #1d1d1d;
+    font-size: clamp(.8rem, 2.5vw, .9rem) !important;
+}
+footer a{
+    text-decoration: none;
+    color: var(--Verydarkcyan);
+    font-weight: 700;
+}
