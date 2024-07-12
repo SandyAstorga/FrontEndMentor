@@ -1,0 +1,200 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    /* Colors */
+    /* Primary */
+    --Softorange: hsl(35, 77%, 62%);
+    --Softred: hsl(5, 85%, 63%);
+
+    /* Neutral */
+    --Offwhite: hsl(36, 100%, 99%);
+    --Grayishblue: hsl(233, 8%, 79%);
+    --Darkgrayishblue: hsl(236, 13%, 42%);
+    --Verydarkblue: hsl(240, 100%, 5%);
+
+    --size: 15px;
+    --inter: "Inter", sans-serif;
+}
+
+/* General */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--inter) !important;
+    position: relative;
+}
+
+
+/* Bootstrap */
+.bg-Verydarkblue {
+    background: var(--Verydarkblue);
+}
+.bg-Softred {
+    background: var(--Softred);
+}
+.text-Darkgrayishblue {
+    color: var(--Darkgrayishblue);
+}
+.text-Verydarkblue {
+    color: var(--Verydarkblue);
+}
+.text-Offwhite {
+    color: var(--Offwhite);
+}
+.text-Softorange {
+    color: var(--Softorange);
+}
+.text-Softred {
+    color: var(--Softred);
+}
+
+
+/* Custom Styles */
+.menu {
+    display: flex !important;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.icon-menu {
+    display: none;
+}
+.close-menu {
+    display: none;
+}
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    font-weight: 500;
+}
+.options a{
+    font-size: clamp(1.1rem, 2.5vw, 1rem) !important;
+    text-decoration: none;
+    cursor: pointer;
+}
+.options a:hover{
+    color: var(--Softred);
+}
+.one img {
+    height: 100%;
+    object-fit: cover;
+}
+.principal h1{
+    font-size: clamp(2rem, 5vw, 2.7rem) !important;
+    line-height: clamp(2rem, 5vw, 3rem) !important;
+}
+.principal p {
+    font-size: clamp(.72rem, 1.5vw, .9rem) !important;
+    padding-right: 1rem;
+}
+.principal button {
+    border: none;
+    text-transform: uppercase !important;
+    letter-spacing: .2rem;
+    font-size: .7rem !important;
+    padding: .8rem 1.5rem;
+    cursor: pointer;
+}
+.principal button:hover{
+    background: var(--Verydarkblue);
+    color: var(--Offwhite);
+}
+.news h1 {
+    font-size: clamp(1.5rem, 5vw, 2rem) !important;
+    margin-bottom: clamp(1.5rem, 5vw, 1.6rem) !important;
+}
+.news h3 {
+    font-size: clamp(.3rem, 5vw, 1rem) !important;
+}
+.news p {
+    font-size: clamp(.1rem, 5vw, .9rem) !important;
+    margin-bottom: clamp(1.5rem, 5vw, 1.6rem) !important;
+}
+.news h3:hover {
+    cursor: pointer;
+    color: var(--Softorange);
+}
+.news hr {
+    margin-bottom: clamp(1.7rem, 5vw, 2rem) !important;
+}
+.two h1 {
+    font-size: clamp(1.5rem, 5vw, 2rem) !important;
+}
+.two h3 {
+    font-size: clamp(.3rem, 5vw, .9rem) !important;
+}
+.two h3:hover {
+    color: var(--Softred);
+    cursor: pointer;
+}
+.two p{
+    font-size: clamp(.7rem, 2.5vw, .7rem) !important;
+}
+.blur-background {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+footer a {
+    text-decoration: none;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .options {
+        display: none;
+    }
+    .one img {
+        height: 250px;
+    }
+    .icon-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .menu.open .options {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: var(--Offwhite);
+        padding: 5rem 2rem;
+        height: 100%;
+        width: 70%;
+        justify-content: start;
+        align-items: start;
+    }
+    .close-menu {
+        cursor: pointer;
+        position: absolute;
+        top: 1.1rem;
+        right: 1.5rem;
+    }
+    .container, .container-sm {
+        min-width: 100%;
+    }
+}
+
+
+@media screen and (min-width: 769px){
+    .two img{
+        height: 70% !important;
+    }
+    .container, .container-md, .container-sm {
+        max-width: 770px;
+    }
+}
