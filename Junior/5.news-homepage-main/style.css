@@ -114,14 +114,14 @@ body {
     font-size: clamp(1.5rem, 5vw, 2rem) !important;
     margin-bottom: clamp(1.5rem, 5vw, 1.6rem) !important;
 }
-.news h3 {
+.news h2 {
     font-size: clamp(.3rem, 5vw, 1rem) !important;
 }
 .news p {
     font-size: clamp(.1rem, 5vw, .9rem) !important;
     margin-bottom: clamp(1.5rem, 5vw, 1.6rem) !important;
 }
-.news h3:hover {
+.news h2:hover {
     cursor: pointer;
     color: var(--Softorange);
 }
@@ -131,10 +131,10 @@ body {
 .two h1 {
     font-size: clamp(1.5rem, 5vw, 2rem) !important;
 }
-.two h3 {
+.two h2 {
     font-size: clamp(.3rem, 5vw, .9rem) !important;
 }
-.two h3:hover {
+.two h2:hover {
     color: var(--Softred);
     cursor: pointer;
 }
