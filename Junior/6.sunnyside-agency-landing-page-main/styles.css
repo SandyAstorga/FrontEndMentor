@@ -81,7 +81,7 @@ a {
     height: 500px;
     position: relative;
 }
-.container-header nav {
+.container-header, .title a{
     font-family: var(--barlow) !important;
 }
 #menu a {
