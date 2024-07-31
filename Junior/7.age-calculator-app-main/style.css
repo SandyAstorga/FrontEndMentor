@@ -1,0 +1,124 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+/* Colors */
+
+/* Primary */
+--Purple: hsl(259, 100%, 65%);
+--Lightred: hsl(0, 100%, 67%);
+
+/* Neutral */
+--White: hsl(0, 0%, 100%);
+--Offwhite: hsl(0, 0%, 94%);
+--Lightgrey: hsl(0, 0%, 86%);
+--Smokeygrey: hsl(0, 1%, 44%);
+--Offblack: hsl(0, 0%, 8%);
+
+--sizeinputs: 32px;
+--poppins: "Poppins", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: var(--poppins) !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Offwhite);
+}
+
+/* Bootstrap */
+.text-Purple {
+    color: var(--Purple);
+}
+.text-Smokeygrey {
+    color: var(--Smokeygrey);
+}
+.text-Lightred {
+    color: var(--Lightred);
+}
+.bg-Offblack {
+    background: var(--Offblack);
+}
+.bg-Purple {
+    background: var(--Purple);
+}
+
+/* Custom Styles */
+.container {
+    margin: .5rem;
+    width: 600px;
+    box-shadow: 1px 1px 5px 1px var(--Offblack);
+    border-radius: 1rem 1rem 6rem 1rem;
+    padding: 2rem !important;
+}
+#arrow{
+    cursor: pointer;
+    padding: .5rem;
+    right: 60px !important;
+}
+#arrow:hover{
+    background: var(--Offblack);
+}
+#empty-error { 
+    display: none;
+    font-size: clamp(.2rem, 2.5vw, .65rem);
+    font-style: italic;
+}
+.form {
+    width: 75%;
+}
+label {
+    letter-spacing: .1rem;
+    font-size: clamp(.6rem, 2.5vw, .7rem) !important;
+}
+input {
+    outline-color: var(--Purple);
+    border: 1px solid var(--Lightgrey);
+}
+input::placeholder {
+    font-weight: 800;
+    font-size: clamp(.8rem, 2.5vw, 1rem) !important;
+}
+hr {
+    width: 85%;
+}
+svg{
+    width: 75%;
+}
+h1, span {
+    font-size: clamp(2.5rem, 12vw, 5rem) !important;
+    font-style: italic;
+}
+footer {
+    font-size: clamp(.7rem, 2.5vw, 1rem) !important;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 1.5rem !important;
+    }
+    #arrow{
+        cursor: pointer;
+        right: 45% !important;
+        padding: .1rem !important;
+    }
+    .form {
+        width: 100% !important;
+    }
+    hr {
+        width: 100%;
+    }
+    svg{
+        width: 50%;
+    }
+}
