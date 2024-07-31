@@ -1,5 +1,7 @@
 const arrowSubmit = document.getElementById('arrow');
-const emptyError = document.querySelectorAll('#empty-error');
+const dayError = document.getElementById('day-error');
+const monthError = document.getElementById('month-error');
+const yearError = document.getElementById('year-error');
 const inputDay = document.getElementById('day');
 const inputMonth = document.getElementById('month');
 const inputYear = document.getElementById('year');
@@ -23,10 +25,15 @@ arrowSubmit.addEventListener('click', function () {
 
 
     if (enteredDay === '' || enteredMonth === '' || enteredYear === '') {
-        emptyError.forEach(empty => {
-            empty.style.display = 'flex';
-            empty.innerHTML = 'This field is required';
-        });
+        dayError.style.display = 'flex'
+        dayError.innerHTML = 'This field is required';
+
+        monthError.style.display = 'flex'
+        monthError.innerHTML = 'This field is required';
+
+        yearError.style.display = 'flex'
+        yearError.innerHTML = 'This field is required';
+
         labels.forEach(label => {
             label.style.color = 'hsl(0, 100%, 67%)';
         });
@@ -34,20 +41,22 @@ arrowSubmit.addEventListener('click', function () {
             input.style.borderColor = 'hsl(0, 100%, 67%)';
         });
     } else if (enteredYear > year ||  enteredYear <= 0 || enteredMonth < 1 || enteredMonth > 12 || enteredDay < 1 || enteredDay > 31 || !isValidDate) {
-        emptyError.forEach(empty => {
-            empty.style.display = 'flex';
-            empty.innerHTML = 'Must be a valid date';
-        });
+        dayError.innerHTML = 'Must be a valid date';
+        monthError.innerHTML = 'Must be a valid date';
+        yearError.innerHTML = 'Must be a valid date';
+
         labels.forEach(label => {
             label.style.color = 'hsl(0, 100%, 67%)';
         });
         inputs.forEach(input => {
             input.style.borderColor = 'hsl(0, 100%, 67%)';
         });
+        
     } else {
-        emptyError.forEach(empty => {
-            empty.style.display = 'none';
-        });
+        dayError.style.display = 'none'
+        monthError.style.display = 'none'
+        yearError.style.display = 'none'
+
         labels.forEach(label => {
             label.style.color = 'hsl(0, 1%, 44%)';
         });

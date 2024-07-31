@@ -68,9 +68,9 @@ body {
 #arrow:hover{
     background: var(--Offblack);
 }
-#empty-error { 
+#day-error, #month-error, #year-error { 
     display: none;
-    font-size: clamp(.2rem, 2.5vw, .65rem);
+    font-size: clamp(.2rem, 2.5vw, .65rem) !important;
     font-style: italic;
 }
 .form {
