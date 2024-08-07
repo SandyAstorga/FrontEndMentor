@@ -1,0 +1,124 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+
+/* Colors */
+
+/* Primary */
+--Green200lighter: hsl(148, 38%, 91%);
+--Green600medium: hsl(169, 82%, 27%);
+--Red: hsl(0, 66%, 54%);
+
+/* Neutral */
+--White: hsl(0, 0%, 100%);
+--Grey500medium: hsl(186, 15%, 59%);
+--Grey900darker: hsl(187, 24%, 22%);
+
+--sizelabels: 16px;
+--fontKarla: "Karla", sans-serif;
+
+}
+
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    font-family: var(--fontKarla);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--Green200lighter) !important;
+}
+
+/* Bootstrap */
+.bg-Green200lighter {
+    background: var(--Green200lighter);
+}
+.bg-Green600medium {
+    background: var(--Green600medium);
+}
+.bg-Grey900darker {
+    background: var(--Grey900darker);
+}
+.text-Green600medium {
+    color: var(--Green600medium);
+}
+.text-Grey900darker {
+    color: var(--Grey900darker);
+}
+.text-Red {
+    color: var(--Red);
+}
+
+/* Custom Styles */
+.container {
+    width: 550px !important;
+    margin: 1rem;
+}
+h1{
+    font-size: clamp(1.5rem, 2.5vw, 2rem) !important;
+}
+form, button, footer, #sent-message {
+    font-size: clamp(.8rem, 2.5vw, .85rem) !important;
+}
+span {
+    font-size: clamp(.7rem, 2.5vw, .75rem) !important;
+}
+input, textarea {
+    outline: none;
+    border: 1px solid var(--Grey500medium);
+}
+textarea {
+    resize: none !important;
+    height: 80px !important;
+}
+button:hover {
+    background: #063F36;
+}
+input:hover {
+    border: 1px solid #063F36;
+    cursor: pointer;
+}
+#general-check, #support-check, #image-check{
+    cursor: pointer;
+}
+#sent-message {
+    background: #063F36;
+    top: 1%;
+    left: 11%;
+    z-index: 2;
+}
+
+#consent-checkbox {
+    z-index: 1;
+    position: relative;
+}
+
+#image-check {
+    z-index: 1;
+    pointer-events: none;
+    display: none;
+}
+
+#general-check, #support-check, #sent-message, #error-first-name, #error-last-name, #error-valid-email, #error-email, #error-message, #error-radio-check, #error-checkbox, #image-check {
+    display: none;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 97% !important;
+        margin: .7rem !important; 
+    }
+    #sent-message {
+        width: 90%;
+        top: 40%;
+        left: 5%;
+    }
+}

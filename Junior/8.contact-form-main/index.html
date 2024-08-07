@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <title>Frontend Mentor | Contact form</title>
+  </head>
+
+  <body>
+    <main class="position-relative">
+      <section
+        id="sent-message"
+        class="p-5 text-white rounded position-absolute m-0"
+      >
+        <div class="d-flex align-items-center gap-2 mb-1">
+          <img src="./assets/images/icon-success-check.svg" alt="check" />
+          <p class="fw-semibold mb-0">Message Sent!</p>
+        </div>
+        <p class="mb-0">
+          Thanks for completing the form. We'll be in touch soon!
+        </p>
+      </section>
+      <section class="container bg-white rounded p-4">
+        <h1 class="fw-semibold text-Grey900darker mb-4">Contact Us</h1>
+        <form class="d-flex flex-column gap-2">
+          <div class="row me-0 mx-0 mb-2">
+            <div class="col-md-6 d-flex flex-column p-0">
+              <label class="text-Grey900darker mb-2">First Name *</label>
+              <input
+                id="first-name"
+                type="text"
+                value=""
+                class="rounded p-2 mb-2"
+              />
+              <span id="error-first-name" class="text-Red mt-1 mb-1"
+                >This field is required</span
+              >
+            </div>
+            <div class="col-md-6 d-flex flex-column p-0">
+              <label class="text-Grey900darker mb-2">Last Name *</label>
+              <input
+                id="last-name"
+                type="text"
+                value=""
+                class="rounded p-2 mb-2"
+              />
+              <span id="error-last-name" class="text-Red mt-1 mb-1"
+                >This field is required</span
+              >
+            </div>
+          </div>
+          <div class="col-md-12 d-flex flex-column mb-2">
+            <label class="text-Grey900darker mb-2">Email Address *</label>
+            <input id="email" type="text" value="" class="rounded p-2 mb-2" />
+            <span id="error-valid-email" class="text-Red mt-1 mb-1"
+              >Please enter a valid email address</span
+            >
+            <span id="error-email" class="text-Red mt-1 mb-1"
+              >This field is required</span
+            >
+          </div>
+          <div class="row mx-0 mb-2">
+            <label class="text-Grey900darker mb-2 p-0">Query Type *</label>
+            <div
+              id="enquiry"
+              class="col-md-6 p-0 px-4 pt-2 pb-2 rounded d-flex align-items-center gap-2 position-relative mb-1"
+              style="border: 1px solid var(--Grey500medium); cursor: pointer"
+            >
+              <input
+                type="radio"
+                id="general-radio"
+                class="position-absolute"
+              />
+              <img
+                id="general-check"
+                class="position-absolute"
+                style="width: 13px"
+                src="./assets/images/icon-radio-selected.svg"
+                alt="radio"
+              />
+              <label class="text-Grey900darker px-4" style="cursor: pointer"
+                >General Enquiry</label
+              >
+            </div>
+            <div
+              id="request"
+              class="col-md-6 p-0 px-4 pt-2 pb-2 rounded d-flex align-items-center gap-2 mb-1"
+              style="border: 1px solid var(--Grey500medium); cursor: pointer"
+            >
+              <input
+                type="radio"
+                name=""
+                id="support-radio"
+                class="position-absolute"
+              />
+              <img
+                id="support-check"
+                class="position-absolute"
+                style="width: 13px"
+                src="./assets/images/icon-radio-selected.svg"
+                alt="radio"
+              />
+              <label class="text-Grey900darker px-4" style="cursor: pointer"
+                >Support Request</label
+              >
+            </div>
+            <span id="error-radio-check" class="text-Red mt-1 mb-1 px-0"
+              >Please select a query type</span
+            >
+          </div>
+          <div class="d-flex flex-column mb-3">
+            <label class="mx-0 mb-2">Message *</label>
+            <textarea
+              name=""
+              id="message"
+              value=""
+              class="rounded p-2"
+            ></textarea>
+            <span id="error-message" class="text-Red mt-1 mb-1"
+              >This field is required</span
+            >
+          </div>
+          <div class="mb-4 d-flex  flex-column gap-2 position-relative">
+            <div class="d-flex align-items-center">
+              <input id="consent-checkbox" type="checkbox" class="position-absolute" />
+              <img
+                id="image-check"
+                style="width: 13px"
+                class="position-absolute"
+                src="./assets/images/icon-checkbox-check.svg"
+                alt="checkbox"
+              />
+              <label class="text-Grey900darker px-4"
+                >I consent to being contacted by the team *</label
+              >
+            </div>
+            <span id="error-checkbox" class="text-Red mb-1">To submit this form, please consent to being contacted</span>
+          </div>
+        </form>
+        <button
+          id="submit"
+          class="w-100 border border-none p-2 rounded bg-Green600medium text-white fw-bold"
+          type="submit"
+        >
+          Submit
+        </button>
+      </section>
+    </main>
+    <footer class="text-center">
+      Challenge by
+      <a
+        class="fw-bold text-decoration-none text-Green600medium"
+        href="https://www.frontendmentor.io?ref=challenge"
+        >Frontend Mentor</a
+      >. Coded by
+      <a
+        class="fw-bold text-decoration-none text-Green600medium"
+        href="https://github.com/SandyAstorga"
+        >Sandy Astorga</a
+      >.
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>
