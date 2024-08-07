@@ -88,6 +88,10 @@ input:hover {
 #general-check, #support-check, #image-check{
     cursor: pointer;
 }
+
+#general-radio:checked, #support-radio:checked, #consent-checkbox:checked {
+    opacity: 0;
+}
 #sent-message {
     background: #063F36;
     top: 1%;
