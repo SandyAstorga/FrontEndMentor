@@ -6,7 +6,7 @@ new Chart(ctx, {
     data: {
         labels: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'],
         datasets: [{
-            data: [20, 35, 52.36, 31.07, 25, 40, 28],
+            data: [17.45, 34.91, 52.36, 31.07, 23.39, 43.28, 25.48],
             backgroundColor: [
                 'hsl(10, 79%, 65%)',
                 'hsl(10, 79%, 65%)',
