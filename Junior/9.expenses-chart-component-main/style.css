@@ -1,0 +1,89 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+
+:root {
+/* Colors */
+
+/* Primary */
+--Softred: hsl(10, 79%, 65%);
+--Cyan: hsl(186, 34%, 60%);
+
+/* Neutral */
+--Darkbrown: hsl(25, 47%, 15%);
+--Mediumbrown: hsl(28, 10%, 53%);
+--Cream: hsl(27, 66%, 92%);
+--Verypaleorange: hsl(33, 100%, 98%);
+
+--size: 18px;
+--DM: "DM Sans", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--DM) !important;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Cream);
+}
+
+
+/* Bootstrap */
+.container {
+    width: 450px;
+    padding: 0 !important;
+    margin: 1rem;;
+}
+.bg-softred {
+    background-color: var(--Softred);
+}
+.text-softred {
+    color: var(--Softred);
+}
+.text-darkbrown {
+    color: var(--Darkbrown);
+}
+.text-mediumbrown {
+    color: var(--Mediumbrown);
+}
+
+
+/* Custom Styles */
+h1, h2 {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+}
+h3 {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+}
+p {
+    font-size: clamp(.65rem, 2.5vw, .79rem);
+}
+footer {
+    font-size: clamp(.9rem, 2.5vw, 1rem);
+}
+section {
+    padding: 1.5rem !important;
+    border-radius: 1rem !important;
+}
+#myChart {
+    padding-right: .5rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px){
+    .container {
+        width: 90%;
+        margin: 1rem;
+    }
+    section {
+        padding: 1.2rem 1rem !important;
+        border-radius: .5rem !important;
+    }
+}
