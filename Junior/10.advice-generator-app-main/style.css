@@ -1,0 +1,117 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+/* Colors
+
+Primary */
+--LightCyan: hsl(193, 38%, 86%);
+--NeonGreen: hsl(150, 100%, 66%);
+
+/* Neutral */
+--GrayishBlue: hsl(217, 19%, 38%);
+--DarkGrayishBlue: hsl(217, 19%, 24%);
+--DarkBlue: hsl(218, 23%, 16%);
+
+--Size: 28px;
+--Manrope: "Manrope", system-ui;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--DarkBlue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--Manrope);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--DarkGrayishBlue);
+    border-radius: .7rem;
+    color: var(--LightCyan);
+    padding: 2rem;
+    width: 550px;
+    height: 310px;
+    position: relative;
+}
+
+.text-advice {
+    text-align: center !important;
+}
+.text-advice p{
+    color: var(--NeonGreen);
+    text-transform: uppercase;
+    font-size: clamp(.7rem, 2.5vw, .9rem);
+    font-weight: 700;
+    margin-bottom: 2rem;
+    letter-spacing: .4rem;
+}
+#advice{
+    font-size: clamp(1rem, 2.5vw, 1.6rem) !important;
+    margin-bottom: 1.5rem;
+}
+
+.pattern{
+    background-image: url('/images/pattern-divider-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+#icon {
+    position: absolute;
+    background: var(--NeonGreen);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .9rem;
+    border-radius: 5rem;
+    bottom: -7%;
+    left: 45.7%;
+    cursor: pointer;
+}
+#icon:hover{
+    box-shadow: 0px 0px 30px 0px var(--NeonGreen);
+
+}
+
+footer {
+    text-align: center;
+    font-size: clamp(.8rem, 2.5vw, 1.3rem);
+    color: var(--LightCyan);
+    margin-top: 4rem;
+}
+footer a{
+    color: var(--NeonGreen);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px){
+    .container{
+        width: 318px;
+        height: 270px;
+        padding: 1.7rem 1.1rem;
+    }
+    .pattern {
+        background-image: url('/images/pattern-divider-mobile.svg');
+    }
+    #icon {
+        left: 43%;
+    }
+}
