@@ -155,7 +155,7 @@ nav {
 }
 .toggle-switch .toggle-label{
     cursor: pointer;
-    background-color: var(--Red500);
+    background-color: var(--Neutral600);
     width: 50px;
     height: 28px;
     display: block;
@@ -175,7 +175,7 @@ nav {
     transition: left 200ms ease;
 }
 .toggle-switch .toggle-input:checked + .toggle-label {
-    background-color: var(--Neutral600);
+    background-color: var(--Red400);
 }
 .toggle-switch .toggle-input:checked + .toggle-label::before {
     left: 25px;
