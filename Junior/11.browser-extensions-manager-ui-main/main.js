@@ -70,7 +70,7 @@ function getData(extensions) {
             <img src=${extension.logo} alt="${extension.name}">
             <div>
                 <h2 style='padding-left: 1rem;'>${extension.name}</h2>
-                <p style='line-height: normal; padding-left: 1rem;}'>${extension.description}</p> 
+                <p style='line-height: normal; padding-left: 1rem;'>${extension.description}</p> 
             </div>
         </div>
             <div style='display: flex; justify-content: space-between; width: 100%; align-items: center'>
@@ -79,7 +79,8 @@ function getData(extensions) {
                     <input class="toggle-input"
                     id = "toggle-${extension.name}"
                     type = "checkbox"
-                    ${extension.isActive ? 'checked' : ''}>
+                    ${extension.isActive ? 'checked' : ''}
+                    aria-label="Activar o desactivar ${extension.name}>
                     <label class="toggle-label" for="toggle-${extension.name}"></label>
                     </div>
             </div>
