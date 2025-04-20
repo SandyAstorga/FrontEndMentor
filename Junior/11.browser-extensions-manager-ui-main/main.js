@@ -69,7 +69,7 @@ function getData(extensions) {
         <div style='display: flex; align-items: flex-start;'>
             <img src=${extension.logo} alt="${extension.name}">
             <div>
-                <h4 style='padding-left: 1rem;'>${extension.name}</h4>
+                <h2 style='padding-left: 1rem;'>${extension.name}</h2>
                 <p style='line-height: normal; padding-left: 1rem;}'>${extension.description}</p> 
             </div>
         </div>
