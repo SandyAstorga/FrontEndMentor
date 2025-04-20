@@ -80,7 +80,7 @@ function getData(extensions) {
                     id = "toggle-${extension.name}"
                     type = "checkbox"
                     ${extension.isActive ? 'checked' : ''}
-                    aria-label="Activar o desactivar ${extension.name}>
+                    aria-label="Activar o desactivar ${extension.name}">
                     <label class="toggle-label" for="toggle-${extension.name}"></label>
                     </div>
             </div>
