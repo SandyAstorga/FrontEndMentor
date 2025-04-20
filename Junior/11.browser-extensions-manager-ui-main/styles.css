@@ -1,0 +1,207 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    
+    /* Neutral */
+--Neutral900: hsl(227, 75%, 14%);
+--Neutral800: hsl(226, 25%, 17%);
+--Neutral700: hsl(225, 23%, 24%);
+--Neutral600: hsl(226, 11%, 37%);
+--Neutral300: hsl(0, 0%, 78%);
+--Neutral200: hsl(217, 61%, 90%);
+--Neutral100: hsl(0, 0%, 93%);
+--Neutral0: hsl(200, 60%, 99%);
+
+    /* Red */
+--Red400: hsl(3, 86%, 64%);
+--Red500: hsl(3, 71%, 56%);
+--Red700: hsl(3, 77%, 44%);
+
+    /* Gradient */
+--LightGradient: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+--DarkGradient: linear-gradient(180deg, #040918 0%, #091540 100%);
+
+--Fontsize: 16px;
+
+--NotoSans: "Noto Sans", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-size: clamp(1.2rem, 2.5vw, .7rem) !important;
+}
+.container{
+    max-width: 1500px !important;
+}
+
+[data-theme='dark']{
+    background: var(--DarkGradient);
+
+    & .container {
+        background: var(--DarkGradient);
+    }
+
+    & .card {
+        background: hsl(217, 19%, 24%);
+        color: white;
+    }
+
+    & header{
+        background: hsl(217, 19%, 24%);
+    }
+
+    & .logo path:nth-child(2){
+        fill: white;
+    }
+
+    & .title {
+        color: white;
+    }
+
+    & .theme-btn {
+        background: var(--Neutral600);
+        border: none;
+    }
+
+    & .filter-btns button, .remove-btn {
+        color: var(--Neutral0);
+        background: var(--Neutral600);
+        border: none;
+    }
+
+    & footer {
+        color: var(--Neutral0);
+    }
+}
+
+header {
+    background: var(--LightGradient);
+}
+nav {
+    color: var(--Neutral0);
+}
+.title{
+    color: black;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--Neutral300);
+}
+.theme-btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: .5rem;
+    background: var(--Neutral100);
+    border: 1px solid var(--Neutral200);
+}
+
+.filter-btns button, .remove-btn {
+    margin: .4rem;
+    color: var(--Neutral800);
+    border-radius: 1.5rem;
+    border: 1px solid var(--Neutral300);
+    padding: .7rem 1.5rem;   
+}
+.remove-btn:hover {
+    background: var(--Red400);
+    color: var(--Neutral900);
+}
+.filter-btns button:hover {
+    background: var(--Red400);
+    color: var(--Neutral900);
+}
+.filter-btns button:focus {
+    background: var(--Red400);
+    color: var(--Neutral900);
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    min-height: 18vh;
+    background: var(--LightGradient);
+    color: var(--Neutral800); 
+    text-align: left;
+    align-items: start; 
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: .5rem;
+}
+
+.toggle-switch {
+    width: fit-content;
+    display: block;
+    position: relative;
+}
+.toggle-switch .toggle-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+.toggle-input:focus-visible + .toggle-label {
+    outline: 2px solid var(--Red400);
+    outline-offset: 2px;
+}
+.toggle-switch .toggle-label{
+    cursor: pointer;
+    background-color: var(--Red500);
+    width: 50px;
+    height: 28px;
+    display: block;
+    border-radius: 1rem;
+    transition: background-color 200ms;
+}
+.toggle-switch .toggle-label::before {
+    content: '';
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    transition: left 200ms ease;
+}
+.toggle-switch .toggle-input:checked + .toggle-label {
+    background-color: var(--Neutral600);
+}
+.toggle-switch .toggle-input:checked + .toggle-label::before {
+    left: 25px;
+}
+
+footer {
+    color: var(--Neutral900);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+footer a {
+    color: plum;
+}
+footer a:hover {
+    color: purple;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 768px){
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+    .card {
+        text-align: center;
+        align-items: center; 
+    }
+}
